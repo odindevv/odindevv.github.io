@@ -80,12 +80,13 @@ body {
   z-index: 1;
   opacity: 0;
   transition: opacity 1s ease-in-out;
+  gap: 1.5em;
 }
 
 .portfolio > * {
   height: 100vh;
-  padding: 20px 80px;
-  max-height: 700px;
+  padding: 0 80px;
+  height: auto;
 }
 
 .portfolio__header {
@@ -265,8 +266,9 @@ body {
   grid-area: skills;
   text-align: center;
   background-color: #f1f1f1;
-  padding-top: 65px;
+  padding: 65px 0;
   height: auto;
+  overflow: auto;
 }
 
 .skills__title {
@@ -318,6 +320,7 @@ body {
   background-color: var(--bg--white);
   text-align: center;
   height: auto;
+  padding-top: 65px;
 }
 
 .projects__title {
@@ -329,6 +332,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 25px;
+  margin-top: 25px;
 }
 
 .project {
@@ -348,7 +352,6 @@ body {
   align-items: center;
   flex-wrap: wrap;
   height: auto;
-  gap: 1.4em;
   overflow-y: scroll;
   background-color: #f1f1f1;
 }
@@ -420,7 +423,7 @@ body {
   .portfolio {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 65px 1.6fr repeat(5, 1fr);
+    grid-template-rows: 65px 1fr 1.5fr repeat(4, 1fr);
   }
 
   .portfolio > * {
@@ -435,7 +438,9 @@ body {
     text-align: center;
     gap: 25px;
     flex-direction: column;
+    justify-content: start;
     align-items: center;
+    padding: 0;
   }
 
   .hero__paragraph {
