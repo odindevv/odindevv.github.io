@@ -65,7 +65,7 @@ body {
 .portfolio {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 65px 1fr repeat(5, 1fr);
+  grid-template-rows: 65px repeat(6, 1fr);
   grid-template-areas:
     "header"
     "hero"
@@ -75,7 +75,6 @@ body {
     "subscription"
     "footer";
   min-height: 100vh;
-  background-color: tomato;
   position: relative;
   z-index: 1;
   opacity: 0;
@@ -311,14 +310,35 @@ body {
 .skill__img {
   width: 120px;
 }
-.portfolio__resume {
-  grid-area: resume;
-  background-color: #124;
-}
 
 .portfolio__projects {
   grid-area: projects;
-  background-color: red;
+  background-color: var(--bg--white);
+  text-align: center;
+  height: auto;
+}
+
+.projects__title {
+  font-size: 2.9em;
+  color: var(--purple-bright);
+}
+
+.projects__grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.project {
+  flex: 1 1 calc(50% - 20px);
+  height: 250px;
+  background-color: #00000027;
+  overflow: hidden;
+}
+
+.portfolio__resume {
+  grid-area: resume;
+  background-color: #124;
 }
 
 .portfolio__subscription--form {
@@ -335,37 +355,26 @@ body {
   .portfolio > * {
     max-height: 1200px;
   }
-}
 
-@media (max-width: 768px) {
-  .portfolio {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 65px repeat(6, 1fr);
-    grid-template-areas:
-      "header"
-      "hero"
-      "skills"
-      "projects"
-      "resume"
-      "subscription"
-      "footer";
-    min-height: 100vh;
-    background-color: tomato;
-    position: relative;
-    z-index: 1;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-  }
-
-  .portfolio > * {
-    height: auto;
+  .portfolio__skills {
+    overflow-y: auto;
   }
 
   .portfolio__hero {
     text-align: center;
     gap: 25px;
     flex-direction: column;
+    align-items: center;
+  }
+
+  .hero__paragraph {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio > * {
+    height: auto;
   }
 
   .header__menu--mobile {
@@ -410,9 +419,5 @@ body {
 
   .nav__li a {
     color: #fff;
-  }
-
-  .hero__paragraph {
-    width: 100%;
   }
 }
