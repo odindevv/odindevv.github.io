@@ -244,6 +244,7 @@ body {
 
 .portfolio__projects {
   grid-area: projects;
+  background-color: red;
 }
 
 .portfolio__subscription--form {
@@ -263,6 +264,36 @@ body {
 }
 
 @media (max-width: 768px) {
+  .portfolio {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 65px repeat(6, 1fr);
+    grid-template-areas:
+      "header"
+      "hero"
+      "skills"
+      "projects"
+      "resume"
+      "subscription"
+      "footer";
+    min-height: 100vh;
+    background-color: tomato;
+    position: relative;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+
+  .portfolio > * {
+    height: auto;
+  }
+
+  .portfolio__hero {
+    text-align: center;
+    gap: 25px;
+    flex-direction: column;
+  }
+
   .header__menu--mobile {
     display: block;
     width: 46px;
@@ -307,14 +338,7 @@ body {
     color: #fff;
   }
 
-  .portfolio__hero {
-    grid-area: hero;
-    /* display: grid;
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "texts"
-      "picture"; */
-    flex-direction: column;
-    background-color: #222;
+  .hero__paragraph {
+    width: 100%;
   }
 }
