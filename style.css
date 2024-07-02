@@ -66,7 +66,7 @@ body {
 .portfolio {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 65px 1fr repeat(5, 1fr);
+  grid-template-rows: 65px 1fr repeat(5, 1fr) auto;
   grid-template-areas:
     "header"
     "hero"
@@ -100,6 +100,7 @@ body {
   height: auto;
   position: fixed;
   z-index: 25;
+  padding-top: 15px;
 }
 
 .header__menu--mobile {
@@ -416,14 +417,59 @@ body {
 
 .portfolio__footer {
   grid-area: footer;
-  background-color: paleturquoise;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--purple--dark);
+  padding: 40px 0;
+  gap: 15px;
+}
+
+.footer__logo {
+  width: 60px;
+}
+
+.footer__ul {
+  list-style: none;
+  display: flex;
+  gap: 1.6em;
+  font-weight: bold;
+}
+
+.footer__ul a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 12px;
+  transition: 0.4s all ease;
+}
+
+.footer__ul a:hover {
+  color: #c4c4c4;
+  transition: 0.4s all ease;
+}
+
+.footer__copyright {
+  color: var(--purple--normal);
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+.footer__copyright a {
+  text-decoration: none;
+  color: var(--purple-bright);
+}
+
+.footer__copyright a:hover {
+  text-decoration: none;
+  color: rgb(133, 62, 248);
 }
 
 @media (max-width: 1200px) {
   .portfolio {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 65px 1fr 1.5fr repeat(4, 1fr);
+    grid-template-rows: 65px 1fr 1.2fr repeat(3, 1fr) auto;
   }
 
   .portfolio > * {
