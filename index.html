@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>odindevv | Portfolio</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
   </head>
   <body>
     <div class="overlay">
@@ -60,43 +64,112 @@
       </header>
       <section class="portfolio__hero" id="home">
         <div class="hero__top">
-        <article class="hero__texts">
-          <h2 class="hero__title">I am Yordy</h1>
-          <h1 class="hero__profession">Web Developer</h1>
-          <p class="hero__paragraph">I break down complex user experinece problems to create integritiy focussed solutions that connect billions of people</p>
-          <div class="hero__links">
-            <a href="#" class="hero__link--cv">Download CV</a>
-            <a href="#" class="hero__link--github"><img src="./icons/github.svg" alt="" class="icon"></a>
-            <a href="#" class="hero__link--instagram"><img src="./icons/instagram.svg" alt="" class="icon"></a>
-            <a href="#" class="hero__link--linkedin"><img src="./icons/linkedin.svg" alt="" class="icon"></a>
-          </div>
-        </article>
-        <article class="hero__stats">
-          <div class="stats">
-            <h1 class="stats__quanty">0</h1>
-            <p class="stats__paragraph">Years of Experience</p>
-          </div>
+          <article class="hero__texts">
+            <h2 class="hero__title">I am Yordy</h2>
+            <h1 class="hero__profession">Web Developer</h1>
+            <p class="hero__paragraph">
+              I break down complex user experinece problems to create integritiy
+              focussed solutions that connect billions of people
+            </p>
+            <div class="hero__links">
+              <a href="#" class="hero__link--cv">Download CV</a>
+              <a href="#" class="hero__link--github"
+                ><img src="./icons/github.svg" alt="" class="icon"
+              /></a>
+              <a href="#" class="hero__link--instagram"
+                ><img src="./icons/instagram.svg" alt="" class="icon"
+              /></a>
+              <a href="#" class="hero__link--linkedin"
+                ><img src="./icons/linkedin.svg" alt="" class="icon"
+              /></a>
+            </div>
+          </article>
+          <article class="hero__stats">
             <div class="stats">
-            <h1 class="stats__quanty">15+</h1>
-            <p class="stats__paragraph">Project completed</p>
-          </div>
+              <h1 class="stats__quanty">0</h1>
+              <p class="stats__paragraph">Years of Experience</p>
+            </div>
             <div class="stats">
-            <h1 class="stats__quanty">5</h1>
-            <p class="stats__paragraph">Happy clients</p>
-          </div>
+              <h1 class="stats__quanty">15+</h1>
+              <p class="stats__paragraph">Project completed</p>
+            </div>
             <div class="stats">
-            <h1 class="stats__quanty">0</h1>
-            <p class="stats__paragraph">Years of Experience</p>
-          </div>
-        </article>
+              <h1 class="stats__quanty">5</h1>
+              <p class="stats__paragraph">Happy clients</p>
+            </div>
+            <div class="stats">
+              <h1 class="stats__quanty">0</h1>
+              <p class="stats__paragraph">Years of Experience</p>
+            </div>
+          </article>
         </div>
         <div class="hero__end">
-        <figure class="hero__photo">
-          <img src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?cs=srgb&dl=pexels-simon-robben-55958-614810.jpg&fm=jpg" alt="" class="hero__img">
-        </figure>
+          <figure class="hero__photo">
+            <img
+              src="https://es.mypet.com/wp-content/uploads/sites/23/2021/03/GettyImages-623368750-e1582816063521-1.jpg"
+              alt=""
+              class="hero__img"
+            />
+          </figure>
         </div>
       </section>
-      <section class="portfolio__skills" id="skills">Skills</section>
+      <section class="portfolio__skills" id="skills">
+        <h1 class="skills__title">My Skills</h1>
+        <p class="skills__paragraph">
+          We put your ideas and thus your wishes in the form of a unique web
+          project that inspires you and you customers
+        </p>
+        <div class="skills__flex">
+          <div class="skill__progamming--languages">
+            <img src="./icons/img/html5-color.svg" alt="" class="skill__img" />
+            <p class="skill__name">HTML</p>
+          </div>
+          <div class="skill__progamming--languages">
+            <img src="./icons/img//css3-color.svg" alt="" class="skill__img" />
+            <p class="skill__name">CSS</p>
+          </div>
+          <div class="skill__progamming--languages">
+            <img
+              src="./icons/img/javascript-color.svg"
+              alt=""
+              class="skill__img"
+            />
+            <p class="skill__name">Javascript</p>
+          </div>
+          <div class="skill__progamming--languages">
+            <img
+              src="./icons/img/nodedotjs-color.svg"
+              alt=""
+              class="skill__img"
+            />
+            <p class="skill__name">NodeJS</p>
+          </div>
+          <div class="skill__progamming--languages">
+            <img
+              src="./icons/img/express-color.svg"
+              alt=""
+              class="skill__img"
+            />
+            <p class="skill__name">Express</p>
+          </div>
+          <div class="skill__progamming--languages">
+            <img
+              src="./icons/img/mongodb-color.svg"
+              alt=""
+              class="skill__img"
+            />
+            <p class="skill__name">MongoDB</p>
+          </div>
+          <div class="skill__progamming--languages">
+            <img src="./icons/img/ejs-color.svg" alt="" class="skill__img" />
+            <p class="skill__name">EJS</p>
+          </div>
+          <div class="skill__progamming--languages">
+            <img src="./icons/img/git-color.svg" alt="" class="skill__img" />
+            <p class="skill__name">Git</p>
+          </div>
+        </div>
+      </section>
       <section class="portfolio__projects" id="projects">Projects</section>
       <section class="portfolio__resume" id="resume">Resume</section>
       <section class="portfolio__subscription--form" id="contact">
@@ -104,6 +177,7 @@
       </section>
       <footer class="portfolio__footer" id="">Footer</footer>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./app.js"></script>
   </body>
 </html>
