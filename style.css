@@ -66,21 +66,19 @@ body {
 .portfolio {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 65px 1fr repeat(4, 1fr) auto;
+  grid-template-rows: 65px 1fr repeat(3, 1fr) auto;
   grid-template-areas:
     "header"
     "hero"
     "skills"
     "projects"
     "resume"
-    "subscription"
     "footer";
   min-height: 100vh;
   position: relative;
   z-index: 1;
   opacity: 0;
   transition: opacity 1s ease-in-out;
-  gap: 1.5em;
 }
 
 .portfolio > * {
@@ -387,10 +385,11 @@ body {
 }
 
 .experience__li {
+  flex: 1 1 calc(50% - 20px);
+
   background-color: #fff;
   border-radius: 9px;
   padding-left: 15px;
-  max-width: 80%;
   height: 110px;
   padding-top: 20px;
 }
@@ -410,10 +409,20 @@ body {
   font-size: 0.8em;
 }
 
-.portfolio__subscription--form {
+/* .portfolio__subscription--form {
   grid-area: subscription;
-  background-color: bisque;
+  background-color: var(--bg--white);
 }
+
+.subscription__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90%;
+  gap: 1.4em;
+} */
+
+/* Footer */
 
 .portfolio__footer {
   grid-area: footer;
@@ -469,11 +478,15 @@ body {
   .portfolio {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 65px 1fr 1.2fr repeat(3, 1fr) auto;
+    grid-template-rows: 65px 0.8fr 1.2fr 0.8fr 1fr auto;
   }
 
   .portfolio > * {
     max-height: auto;
+  }
+
+  .portfolio__header {
+    justify-content: center;
   }
 
   .portfolio__skills {
@@ -516,6 +529,30 @@ body {
     padding-bottom: 6px;
     padding-top: 5px;
     width: 100%;
+  }
+
+  .portfolio__projects {
+    padding-bottom: 45px;
+  }
+
+  .projects__grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 25px;
+    flex-direction: column;
+  }
+
+  .project {
+    flex: auto;
+    height: 250px;
+    background-color: #00000027;
+    overflow: hidden;
+    border-radius: 9px;
+  }
+
+  .portfolio__resume {
+    padding: 0;
   }
 }
 
