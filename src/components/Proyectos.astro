@@ -1,0 +1,38 @@
+---
+import ProyectoItem from './ProyectoItem.astro';
+
+const PROYECTOS = [
+  {
+    name: 'Facebook Modern Clone Interfaz',
+    description:
+      'Clon moderno de Facebook desarrollado con tecnologías frontend avanzadas. Este proyecto recrea la experiencia visual de Facebook, implementando una interfaz responsiva con React, Material UI.',
+    tags: ['React', 'Material UI'],
+    picture:
+      'https://github.com/odindevv/facebook-modern-clone/raw/main/views/HomeDesktopView.png',
+    link: 'https://github.com/odindevv/facebook-modern-clone',
+  },
+  {
+    name: 'Todo App',
+    description:
+      'Todo App - desarrollado en React, manejando el uso de estados. Mi primer proyecto en React.',
+    tags: ['React'],
+    picture: 'https://i.ibb.co/j8gFbbW/brave-TEh6-Ti-R41-S.png',
+    link: 'https://odindevv.github.io/todo-app-react/',
+  },
+];
+---
+
+<section class="space-y-12 mb-16 max-w-4xl" id="proyectos">
+  <h1 class="font-bold text-4xl">Proyectos</h1>
+  {
+    PROYECTOS.map(({ name, description, tags, picture, link }) => (
+      <ProyectoItem
+        name={name}
+        description={description}
+        tags={tags}
+        picture={picture}
+        link={link}
+      />
+    ))
+  }
+</section>

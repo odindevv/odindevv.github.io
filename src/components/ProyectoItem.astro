@@ -1,0 +1,36 @@
+---
+import Tag from './Tag.astro';
+
+interface Props {
+  name: string;
+  description: string;
+  tags: string[];
+  picture: string;
+  link: string;
+}
+
+const { name, description, tags, picture, link } = Astro.props;
+---
+
+<div
+  class="flex lg:flex-row-reverse flex-col sm:space-y-4 lg:space-y-0 rounded-md"
+>
+  <div class="flex flex-col justify-between lg:ml-8 w-full">
+    <h2 class="font-bold text-2xl hover:text-purple-600 transition">
+      <a href={link} target="_blank">{name}</a>
+    </h2>
+    <p class="mb-4 break-words cursor-default">
+      {description}
+    </p>
+    <div class="flex space-x-2 pb-6">
+      {tags.map((tag) => <Tag>{tag}</Tag>)}
+    </div>
+  </div>
+  <a href={link} target="_blank">
+    <img
+      src={picture}
+      alt="Facebook-modern-clone app"
+      class="shadow-md rounded-md w-[400px] h-full cursor-pointer object-cover hover:scale-110 transition"
+    />
+  </a>
+</div>
